@@ -1,6 +1,6 @@
 <%= link_to('Back to Home', {controller: 'main', action: 'index'}) %>
 <h1>Tasks</h1>
-<p>Description</p>
+<p>Description of the tasks page</p>
 <ul>
 	<% @tasks.each do |task| %>
 		<li>
@@ -8,3 +8,5 @@
 		</li>
 	<% end %>
 </ul>
+
+<%= link_to('First Task', task_path(1)) %>

@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = ['Fold laundry', 'wash dishes', 'Mow lawn']
+    @tasks = Task.order(:position)
   end
 
   def show
