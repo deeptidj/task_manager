@@ -30,8 +30,8 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-    if @category.update(task_params)
-      redirect_to task_path(@category)
+    if @category.update(categories_params)
+      redirect_to category_path(@category)
     else
       render('edit')
     end
