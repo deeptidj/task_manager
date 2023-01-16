@@ -3482,3 +3482,45 @@ Processing by MainController#about as HTML
 Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2805)
 
 
+Started GET "/main/index" for ::1 at 2023-01-16 11:27:47 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1272)
+  Rendered layout layouts/application.html.erb (Duration: 100.5ms | Allocations: 38328)
+Completed 200 OK in 111ms (Views: 104.3ms | ActiveRecord: 0.0ms | Allocations: 41353)
+
+
+Started GET "/main/index" for ::1 at 2023-01-16 11:27:47 -0800
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2772)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3095)
+
+
+Started GET "/categories" for ::1 at 2023-01-16 11:27:50 -0800
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2624)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2722)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3445)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;		 @tasks.each do |task| 
+         		       ^^^^^):
+    11: 			<th>Category</th>
+    12: 			<th>Actions</th>
+    13: 		</tr>
+    14: 		<% @tasks.each do |task| %>
+    15: 			<tr>
+    16: 				<td><%= task.name %></td>
+    17: 				<td class="actions">
+  
+app/views/categories/index.html.erb:14
