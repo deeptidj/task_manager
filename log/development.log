@@ -3524,3 +3524,28 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass
     17: 				<td class="actions">
   
 app/views/categories/index.html.erb:14
+Started GET "/categories" for ::1 at 2023-01-16 11:36:25 -0800
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` ORDER BY `categories`.`name` ASC[0m
+  ↳ app/views/categories/index.html.erb:13
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4782)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 19178)
+Completed 200 OK in 80ms (Views: 23.2ms | ActiveRecord: 47.3ms | Allocations: 22586)
+
+
+Started GET "/categories/new" for ::1 at 2023-01-16 11:36:30 -0800
+Processing by CategoriesController#new as HTML
+  [1m[36mCategory Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories`[0m
+  ↳ app/controllers/categories_controller.rb:12:in `new'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms | Allocations: 1714)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'position' for Category.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/categories_controller.rb:13:in `new'

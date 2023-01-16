@@ -9,8 +9,7 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @count = Category.count
-    @category = Category.new(position: @count + 1)
+    @category = Category.new
   end
 
   def create
