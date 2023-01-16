@@ -1,10 +1,11 @@
 class MainController < ApplicationController
+
   def index
-    render('index')
+    # render('index')
   end
 
   def about
-    @created_by = 'Deepti Jain'
+    @created_by = "Kevin"
     @id = params['id']
     @page = params[:page]
     # render('about')
@@ -13,4 +14,5 @@ class MainController < ApplicationController
   def hello
     redirect_to(action: 'index')
   end
+
 end
