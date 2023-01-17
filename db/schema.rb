@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_011615) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_17_045847) do
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -25,6 +25,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_011615) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
+  end
+
+  create_table "trees", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.text "qspecies"
+    t.text "qaddress"
+    t.text "qsiteinfo"
+    t.string "planttype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

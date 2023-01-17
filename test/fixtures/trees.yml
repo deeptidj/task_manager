@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qspecies: MyText
+  qaddress: MyText
+  qsiteinfo: MyText
+  planttype: MyString
+
+two:
+  qspecies: MyText
+  qaddress: MyText
+  qsiteinfo: MyText
+  planttype: MyString

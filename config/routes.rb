@@ -25,6 +25,14 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'trees', to: 'trees#index'
+
+  resources :trees do
+    member do
+      get :delete
+    end
+  end
+
   match 'about', to: "main#about", via: :get
   match 'hello', to: "main#hello", via: :get
 
